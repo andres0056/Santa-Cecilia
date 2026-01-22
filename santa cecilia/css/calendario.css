@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ============================= */
+/* FONDO */
+/* ============================= */
+
+.calendar_body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#6ac1c5,#bda5ff);
+}
+
+/* ============================= */
+/* CONTENEDOR GENERAL */
+/* ============================= */
+
+.calendar-page {
+    width: 95%;
+    max-width: 1600px;
+    margin: 120px auto 50px auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ============================= */
+/* CALENDARIO */
+/* ============================= */
+
+.calendar-wrapper {
+    flex: 4;
+}
+
+#calendar {
+    width: 100%;
+    margin: 0;
+}
+
+/* ============================= */
+/* ✅ SIDEBAR MÁS PEQUEÑO (BIEN HECHO) */
+/* ============================= */
+
+/* Reducir espacio lateral SIN tocar width */
+.evo-calendar .calendar-sidebar {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* Compactar tipografía general */
+.evo-calendar .calendar-sidebar * {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+/* 🔥 SOLO reducir la zona de contenido (NO los meses) */
+.evo-calendar .calendar-events {
+    transform: scale(0.85);
+}
+
+/* Ajustar espacio para que no “empuje” */
+.evo-calendar .calendar-events {
+    margin-top: -6px;
+}
+
+/* ============================= */
+/* MESES (SE QUEDAN NORMALES) */
+/* ============================= */
+
+.calendar-sidebar .calendar-months {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-sidebar .calendar-months li {
+    width: 100%;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
+/* ============================= */
+/* TEXTOS ESPECÍFICOS */
+/* ============================= */
+
+.evo-calendar .calendar-year p {
+    font-size: 15px;
+}
+
+.evo-calendar .event-empty p {
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* ============================= */
+/* FORMULARIO */
+/* ============================= */
+
+.form-event {
+    flex: 1;
+    position: sticky;
+    top: 140px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-event input,
+.form-event textarea,
+.form-event button {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.form-event textarea {
+    resize: none;
+    height: 90px;
+}
+
+.form-event button {
+    background: rgba(13, 53, 43, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1000px) {
+    .calendar-page {
+        flex-direction: column;
+    }
+
+    .form-event {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+}
+
+
+.no-event-box {
+    background-color: #dffff6;
+    border: 2px solid #6fb3a2;
+    color: #4f7f73;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: left;
+}

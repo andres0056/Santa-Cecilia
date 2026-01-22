@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SANTA CECILIA 4</title>
+
+    <link rel="stylesheet" href="CSS/calendario.css">
+    <link rel="stylesheet" href="css/estilostar.css">
+    <link rel="stylesheet" href="CSS/evo-calendar.min.css">
+    <link rel="stylesheet" href="CSS/evo-calendar.orange-coral.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="JS/evo-calendar.min.js"></script>
+
+    <style>
+        .delete-btn {
+            margin-top: 15px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .delete-btn:hover {
+            background: #c0392b;
+        }
+
+        .no-event-box {
+            background-color: #dffff6;
+            border: 2px solid #6fb3a2;
+            color: #4f7f73;
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<style>
+body{
+  background: linear-gradient(
+    180deg,
+    #4fa3a8,
+    #6fb3a2,
+    #8fd37a
+  );
+}
+.no-event-box {
+  background-color: #dffff6;
+  border: 2px solid #6fb3a2;
+  color: #3f7f73;
+  border-radius: 8px;
+}
+</style>
+
+<body>
+
+<header>
+    <div>
+        <h1 class="titulo">SANTA CECILIA 4</h1>
+    </div>
+
+    <div class="menu-contenedor">
+        <button>
+            <div></div>
+            <div></div>
+            <div></div>
+            <ul>
+                <li>
+                    <a href="index.html">INICIO</a>
+                </li>
+                <li>
+                    <a href="quejas.html">QUEJAS</a>
+                </li>
+            </ul>
+        </button>
+    </div>
+</header>
+<!-- TITULO FLOTANTE -->
+<div class="titulo-calendario-flotante">
+    CALENDARIO
+</div>
+
+<div class="calendar-page">
+
+    
+
+    <div class="calendar-wrapper">
+        <div id="calendar"></div>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="form-event" id="formEvent">
+        <input type="text" id="eventName" placeholder="Nombre del evento">
+        <input type="date" id="eventDate">
+        <textarea id="eventDesc" placeholder="Descripción"></textarea>
+        <button onclick="addEvent()">Agregar actividad</button>
+    </div>
+
+</div>
+
+<!-- TODO TU JS QUEDA IGUAL -->
+<script>
+/* ================== LOCAL STORAGE ================== */
+function getSavedEvents() {
+    return JSON.parse(localStorage.getItem("calendarEvents")) || [];
+}
+function saveEvents(events) {
+    localStorage.setItem("calendarEvents", JSON.stringify(events));
+}
+$(document).ready(function () {
+    $('#calendar').evoCalendar({
+        theme: "Orange Coral",
+        language: 'es',
+        todayHighlight: true,
+        calendarEvents: getSavedEvents()
+    });
+    setTimeout(moveForm, 300);
+});
+function moveForm() {
+    const form = document.getElementById("formEvent");
+    const section = document.querySelector(".calendar-events");
+    if (form && section) section.appendChild(form);
+}
+</script>
+
+</body>
+</html>

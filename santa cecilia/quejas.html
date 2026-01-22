@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SANTA CECILIA 4</title>
+
+    <link rel="stylesheet" href="CSS/contactanos.css">
+    <link rel="stylesheet" href="css/estilostar.css">
+
+    <style>
+  body{
+    background: linear-gradient(
+      180deg,
+      #4fa3a8,
+      #6fb3a2,
+      #8fd37a
+    );
+  }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+            <div>
+                <h1 class="titulo"  >SANTA CECILIA 4 </h1>
+            </div>
+
+            <div class="menu-contenedor">
+                <button>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                        <ul>
+                            <li style="--clr:#b2cac0">
+                                <a href="index.html" data-text="&nbsp;INICIO">&nbsp;INICIO&nbsp; </a>
+                            </li>
+                            <li style="--clr:#b2cac0">
+                                <a href="calendario.html"  data-text="&nbsp;CALENDARIO">&nbsp;CALENDARIO&nbsp; </a>
+                            </li>
+                           
+                        </ul>
+                </button>
+            </div>
+           
+        </header>
+<div class="titulo-quejas-flotante">
+  QUEJAS
+</div>
+
+<section class="contactanos">
+    <div class="contactForm">
+
+        <!-- FORMULARIO -->
+        <div class="form">
+            <div class="texto">
+                <h2>¡Hablemos!</h2>
+                <p>Déjanos tu mensaje y con gusto te responderemos.</p>
+            </div>
+
+            <form id="formMensajes">
+                <div class="inputBox">
+                    <label>Tu nombre</label>
+                    <input id="nombre" type="text" placeholder="Nombre..." required>
+                </div>
+
+                <div class="inputBox">
+                    <label>Tu mensaje</label>
+                    <textarea id="mensaje" rows="5" placeholder="Mensaje..." required></textarea>
+                </div>
+
+                <input type="submit" value="Enviar Mensaje">
+            </form>
+        </div>
+
+        <!-- MENSAJES -->
+        <div class="mensajes">
+            <h3>Mensajes enviados</h3>
+            <button id="borrarTodo">Borrar todos</button>
+            <div id="listaMensajes"></div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const form = document.getElementById("formMensajes");
+const lista = document.getElementById("listaMensajes");
+const borrarTodo = document.getElementById("borrarTodo");
+
+let mensajes = JSON.parse(localStorage.getItem("mensajes")) || [];
+mostrarMensajes();
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    mensajes.push({ nombre, mensaje });
+    localStorage.setItem("mensajes", JSON.stringify(mensajes));
+
+    mostrarMensajes();
+    form.reset();
+});
+
+borrarTodo.addEventListener("click", function(){
+    if(confirm("¿Seguro que deseas borrar todos los mensajes?")){
+        mensajes = [];
+        localStorage.removeItem("mensajes");
+        mostrarMensajes();
+    }
+});
+
+function borrarMensaje(index){
+    mensajes.splice(index, 1);
+    localStorage.setItem("mensajes", JSON.stringify(mensajes));
+    mostrarMensajes();
+}
+
+function mostrarMensajes(){
+    lista.innerHTML = "";
+    mensajes.forEach((m, index) => {
+        const div = document.createElement("div");
+        div.classList.add("mensaje-item");
+        div.innerHTML = `
+            <strong>${m.nombre}</strong>
+            <p>${m.mensaje}</p>
+            <button class="borrar" onclick="borrarMensaje(${index})">Borrar</button>
+        `;
+        lista.appendChild(div);
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.patro_tit{
+    color: #333;
+    text-align: center;
+    font-size: 35px;
+}
+
+.patro_body{
+    padding-top: 90px;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(161, 185, 204, 0.273);
+}
+
+.patrono{
+    width: 90%;
+    height: 210px;
+    margin-bottom: 40px;
+}
+
+.patro_img{
+    float:inline-start;
+    width: 10%;
+    height: 220px;
+    margin-left: 25%;
+}
+
+.patro_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.patro_concep{
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    margin-left: 40%;
+    width: 50%;
+    height: 220px;
+    background-color: aliceblue;
+    font-size: 20px;
+    text-align: justify;
+    box-shadow: 0 15px 20px rgba(222, 135, 13, 0.5);
+}
+
+.patro_concep p{
+    padding: 10px;
+}
+
+.histo_title{
+    color: #333;
+    text-align: center;
+    background: rgba(214, 162, 67, 0.703);
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.historia {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente al centro */
+    margin-left: 5%;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.carrousel {
+    width: 45%;
+    margin-top: 10px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.text-history {
+    width: 52%; /* Reducido de 50% a 45% para dar espacio al carrousel */
+    height: auto;
+    font-size: 20px;
+    padding: 0 20px;
+    text-align: justify;
+    box-shadow: 0 5px 10px #bdbbbb;
+}
+
+
+	/* Carrusel */
+	.containcer-slider{
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        z-index: -0;
+        margin-bottom: -20px;
+        }
+    
+        .slider{
+        display: flex;
+        width: 600%;
+        height: 400px;
+        margin-left: -100%;
+        }
+    
+        .slider__section{
+        width: 100%;
+        }
+    
+        .slider__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        }
+    
+        .slider__btn{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        font-weight: bold;
+        font-family: monospace;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+    
+        .slider__btn:hover{
+        background-color: #fff;
+        }
+    
+        .slider__btn--left{
+        left: 10px;
+        }
+    
+        .slider__btn--right{
+        right: 10px;
+        }
+
+
+
+
+.valores{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    display: flex;
+}
+
+.MiViId{
+    float: left;
+    margin-left: 5%;
+    width: 50%;
+    height: auto;
+    background-color: rgba(255, 166, 0, 0.32);
+    margin-right: 5%;
+    margin-bottom: 20px;
+}
+
+.imgestudiante{
+    float: inline-end;
+    width: 35%;
+    height: 700px;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+.imgestudiante img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.valores h1{
+    margin-left: 25px;
+    color: rgb(235, 147, 40);
+    font-size: x-large;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.valores p{
+    text-align: justify;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.col3 {
+    padding: 0;
+    margin: 15px 0px;
+    width: 100%;
+    list-style: none; 
+}
+
+.col3 li {
+    display: inline;
+    padding-left: 30px;
+    float: left;
+    padding-bottom: 15px;
+    width: 32%;
+}
+
+.col3 li::before {
+    content: '>';
+    color: rgb(239, 138, 16);
+    font-family: sans-serif;
+    text-shadow: 2px 2px rgb(104, 75, 75);
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-right: 7px;
+}
+
+.valtitle{
+    margin-top: 20px;
+    padding-top: 3px;
+    margin-left: 0;
+    font-size: 2rem;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 2465px){
+    .carrousel {
+        width: 55%;
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 2090px){
+    .carrousel {
+        width: 50%;
+        height: 550px;
+    }
+
+    .imgestudiante{
+        margin-top: 85px;
+    }
+}
+
+@media screen and (max-width: 1800px){
+    .patro_img{
+        width: 15%;
+        margin-left: 20%;
+    }
+
+    .patro_concep{
+        font-size: 17px;
+    }
+
+    .valores{
+        font-size: 17px;
+    }
+
+    .imgestudiante{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1705px){
+    .historia {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    
+    .carrousel {
+        margin-left: 17%;
+        width: 65%;
+        position: relative;
+        overflow: hidden;
+        margin-top: -100px;
+        margin-bottom: -100px;
+    }
+    
+    .text-history {
+        width: 100%;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+
+    .slider{
+        height: 350px;
+    }
+
+    .valores{
+        font-size: 17px;
+    }
+    
+    .imgestudiante{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1450px){
+    .valores{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+    }
+
+    .MiViId{
+        width: 90%;
+        height: auto;
+    }
+    
+    .imgestudiante{
+        margin-top: 0;
+        margin-left: 5%;
+        width: 50%;
+        height: 400px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1360px){
+    .patro_img{
+        width: 19%;
+        height: 235px;
+        margin-left: 10%;
+    }
+
+    .patro_concep{
+        width: 65%;
+        height: 235px;
+        margin-left: 35%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .slider{
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 910px){
+    .patro_img{
+        width: 21%;
+        margin-left:5%;
+        margin-top: 15px;
+        height: 205px;
+    }
+
+    .patro_concep{
+        margin-left: 30%;
+        width: 74%;
+        padding-top: 0;
+        padding-bottom: 0px;
+        font-size: 15px;
+    }
+
+    .carrousel{
+        margin-left: 10%;
+        width: 80%;
+        margin-top: -140px;
+        margin-bottom: -140px;
+    }
+
+    .text-history{
+        font-size: 15px;
+    }
+
+    .slider{
+        height: 260px;
+    }
+
+    .valores{
+        font-size: 15px;
+    }
+    
+    .imgestudiante{
+        width: 50%;
+        height: 300px;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 810px){
+    .carrousel{
+        margin-left: 5%;
+        width: 90%;
+        margin-top: -140px;
+        margin-bottom: -140px;
+    }
+    .slider{
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .patro_body{
+        background: none;
+    }
+
+    .patrono{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .patro_img{
+        margin: 0;
+        padding-bottom: 10px;
+        width: 150px;
+        height: 200px;
+    }
+
+    .patro_concep{
+        width: 90%;
+        height: auto;
+        position: static;
+        margin-left: 0;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .histo_title{
+        margin-top: 140px;
+    }
+
+    .carrousel{
+        margin: 0;
+        width: 100%;
+        margin-top: -150px;
+        margin-bottom: -150px;
+    }
+
+    .text-history{
+        font-size: 14px;
+    }
+
+    .slider{
+        height: 250px;
+    }
+
+    .valores{
+        font-size: 14px;
+    }
+
+    .imgestudiante{
+        width: 60%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .histo_title{
+        margin-top: 150px;
+    }
+
+    .col3 li {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .histo_title{
+        margin-top: 170px;
+    }
+
+    .carrousel{
+        margin: 0;
+        width: 100%;
+        margin-top: -180px;
+        margin-bottom: -180px;
+    }
+
+    .text-history{
+        font-size: 14px;
+    }
+
+    .slider{
+        height: 200px;
+    }
+
+    .imgestudiante{
+        width: 75%;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .histo_title{
+        margin-top: 210px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .histo_title{
+        margin-top: 240px;
+    }
+
+    .imgestudiante{
+        width: 90%;
+        height: 275px;
+    }
+}
+
+@media screen and (max-width: 355px){
+    .histo_title{
+        margin-top: 260px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .histo_title{
+        margin-top: 280px;
+    }
+}
