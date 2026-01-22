@@ -17,7 +17,7 @@ body {
     var(--verde-medio),
     var(--verde-claro)
   );
-  color: #245e58; /* 🔥 texto general más visible */
+  color: #245e58;
 }
 
 /* ====== HEADER ====== */
@@ -33,7 +33,7 @@ header {
 
 .titulo {
   margin: 0;
-  color: #1f4f4a; /* 🔥 más contraste */
+  color: #1f4f4a;
   font-weight: 800;
 }
 
@@ -44,7 +44,6 @@ header {
   cursor: pointer;
 }
 
-/* CONTENEDOR DEL MENÚ */
 .menu-contenedor ul {
   display: flex;
   gap: 16px;
@@ -54,7 +53,6 @@ header {
   list-style: none;
 }
 
-/* BOTONES INDIVIDUALES */
 .menu-contenedor ul li {
   background: var(--verde-suave);
   border-radius: 999px;
@@ -63,14 +61,12 @@ header {
   transition: all 0.25s ease;
 }
 
-/* 🔥 TEXTO DE BOTONES (CAMBIADO) */
 .menu-contenedor ul li a {
-  color: #1f4f4a;   /* antes no se veía bien */
+  color: #1f4f4a;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* HOVER */
 .menu-contenedor ul li:hover {
   background: var(--verde-medio);
 }
@@ -90,10 +86,10 @@ section,
   padding: 20px;
   margin: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  color: #245e58; /* 🔥 texto interno visible */
+  color: #245e58;
 }
 
-/* ====== BOTONES GENERALES ====== */
+/* ====== BOTONES ====== */
 button,
 input[type="submit"] {
   background: linear-gradient(
@@ -113,8 +109,10 @@ button:hover,
 input[type="submit"]:hover {
   background: var(--turquesa);
 }
-/* ====== TITULO CALENDARIO FLOTANTE ====== */
-.titulo-calendario-flotante {
+
+/* ====== TITULOS FLOTANTES (UNIFICADOS) ====== */
+.titulo-calendario-flotante,
+.titulo-quejas-flotante {
   position: absolute;
   top: 110px;
   left: 50%;
@@ -122,20 +120,7 @@ input[type="submit"]:hover {
   font-size: 38px;
   font-weight: 900;
   letter-spacing: 3px;
-  color: #ffffff;                 /* 🔥 BLANCO */
-  text-shadow: 0 3px 8px rgba(0,0,0,0.25); /* 🔥 contraste */
-  pointer-events: none;
-}
-
-
-.titulo-quejas-flotante {
-  position: absolute;
-  top: 110px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 36px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #1f4f4a;
+  color: #ffffff;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
   pointer-events: none;
 }
