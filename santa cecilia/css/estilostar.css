@@ -7,6 +7,7 @@
   --blanco: #ffffff;
 }
 
+
 /* ====== GENERAL ====== */
 body {
   margin: 0;
@@ -124,3 +125,4 @@ input[type="submit"]:hover {
   text-shadow: 0 3px 8px rgba(0,0,0,0.35);
   pointer-events: none;
 }
+
