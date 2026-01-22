@@ -6,13 +6,14 @@
 
     <title>SANTA CECILIA 4</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/estilostar.css">
     <link rel="stylesheet" href="css/calendario.css">
     <link rel="stylesheet" href="css/evo-calendar.min.css">
     <link rel="stylesheet" href="css/evo-calendar.orange-coral.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="JS/evo-calendar.min.js"></script>
+    <script src="js/evo-calendar.min.js"></script>
 
     <style>
         .delete-btn {
@@ -33,9 +34,9 @@
         .no-event-box {
             background-color: #dffff6;
             border: 2px solid #6fb3a2;
-            color: #4f7f73;
+            color: #3f7f73;
             padding: 20px;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 16px;
         }
     </style>
@@ -49,12 +50,6 @@ body{
     #6fb3a2,
     #8fd37a
   );
-}
-.no-event-box {
-  background-color: #dffff6;
-  border: 2px solid #6fb3a2;
-  color: #3f7f73;
-  border-radius: 8px;
 }
 </style>
 
@@ -81,15 +76,13 @@ body{
         </button>
     </div>
 </header>
-<!-- TITULO FLOTANTE -->
-<div class="titulo-calendario-flotante">
+
+<!-- 🔥 TÍTULO UNIFICADO -->
+<div class="titulo-pagina">
     CALENDARIO
 </div>
 
 <div class="calendar-page">
-
-    
-
     <div class="calendar-wrapper">
         <div id="calendar"></div>
     </div>
@@ -101,12 +94,9 @@ body{
         <textarea id="eventDesc" placeholder="Descripción"></textarea>
         <button onclick="addEvent()">Agregar actividad</button>
     </div>
-
 </div>
 
-<!-- TODO TU JS QUEDA IGUAL -->
 <script>
-/* ================== LOCAL STORAGE ================== */
 function getSavedEvents() {
     return JSON.parse(localStorage.getItem("calendarEvents")) || [];
 }
@@ -131,4 +121,5 @@ function moveForm() {
 
 </body>
 </html>
+
 
